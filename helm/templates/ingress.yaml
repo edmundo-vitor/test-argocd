@@ -11,6 +11,8 @@ spec:
   rules:
   - http:
       paths:
+      - path: /
+        pathType: Prefix
       - backend:
           serviceName: app
           servicePort: http
