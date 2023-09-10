@@ -1,16 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argocd-server-http
+  name: argocd-server-external-callback-http
   annotations:
-    kubernetes.io/ingress.class: contour-internal
+    kubernetes.io/ingress.class: contour-external
     ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   rules:
   - host: edmundo.local
     http:
       paths:
-      - backend:
+      - path: /
+        backend:
           serviceName: app
           servicePort: http
   tls:
