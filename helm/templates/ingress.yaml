@@ -18,8 +18,7 @@ spec:
         backend:
           service:
             name: app
-            port:
-              name: http
+            port: 3000
     host: argocd.example.com
   tls:
   - hosts:
