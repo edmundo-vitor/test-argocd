@@ -11,7 +11,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: argocd-server
+          serviceName: app
           servicePort: http
   tls:
   - hosts:
