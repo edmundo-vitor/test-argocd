@@ -13,8 +13,10 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          serviceName: app
-          servicePort: http
+          service: 
+            name: app
+            port:
+              name: http
   tls:
   - hosts:
     - edmundo.local
