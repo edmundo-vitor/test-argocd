@@ -16,9 +16,8 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          service:
-            name: app
-            port: 3000
+          serviceName: app
+          servicePort: 3000
     host: argocd.example.com
   tls:
   - hosts:
